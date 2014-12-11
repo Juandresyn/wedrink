@@ -1,0 +1,155 @@
+<html>
+<head>
+<title>WeDrink</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width">
+<style type="text/css">
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+} 
+strong, b {
+    font-weight: bold;
+}
+ 
+p{
+    font-size: 16px;
+}
+body{
+background-color: #000;
+background-image: url(bg.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.header{
+	width: 91.5%;
+	background: #d35400;
+	padding: 15px;
+	margin-bottom: 20px;
+}
+
+#ia{
+	width: 90%;
+	height: auto;
+	vertical-align: middle;
+	position: inherit;
+}
+
+.logo{
+	height: 35px;
+	width: auto;
+}
+</style>
+<script type="text/javascript">
+function rand(n){
+ return(Math.floor(Math.random() * n + 1 ));
+}
+var yasedio = false;
+//guardas imagenes en el array
+var cambia_imagen = new Array();
+cambia_imagen[0] = "a.png";
+cambia_imagen[1] = "a.png";
+cambia_imagen[2] = "2.png";
+cambia_imagen[3] = "3.png";
+cambia_imagen[4] = "4.png";
+cambia_imagen[5] = "5.png";
+cambia_imagen[6] = "6.png";
+cambia_imagen[7] = "7.png";
+cambia_imagen[8] = "8.png";
+cambia_imagen[9] = "9.png";
+cambia_imagen[10] = "10.png";
+cambia_imagen[11] = "J.png";
+cambia_imagen[12] = "Q.png";
+cambia_imagen[13] = "K.png";
+cambia_imagen[14] = "JK.png";
+cambia_imagen[15] = "5.png";
+cambia_imagen[16] = "6.png";
+cambia_imagen[17] = "8.png";
+cambia_imagen[18] = "9.png";
+cambia_imagen[19] = "9.png";
+cambia_imagen[20] = "10.png";
+cambia_imagen[21] = "Q.png";
+cambia_imagen[22] = "2.png";
+cambia_imagen[23] = "J.png";
+cambia_imagen[24] = "4.png";
+cambia_imagen[25] = "7.png";
+cambia_imagen[26] = "6.png";
+cambia_imagen[27] = "5.png";
+cambia_imagen[28] = "10.png";
+cambia_imagen[29] = "9.png";
+cambia_imagen[30] = "2.png";
+
+ 
+function cambiar(){
+	
+	if(! yasedio){
+		document.getElementById("ia").src = cambia_imagen[rand(30)-1];
+		yasedio = true;
+	}else{
+		document.getElementById("ia").src = "WeDrink.png";
+		yasedio = false;
+	}
+}
+</script>
+<script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        navigator.splashscreen.show();
+        
+    }
+
+    </script>
+</head>
+<body  onload="init();">
+<center>
+<div class="frame">
+<section class="header">
+	<img src="logow.png" class="logo">
+</section>
+<!-- <button onclick="cambiar();">Cambiar imagen</button></p> -->
+<input type="image" src="WeDrink.png" border="0" onclick="cambiar();" id="ia">
+</div>
+<p>
+@JuandresYN
+</P>
+
+</body>
+</html>
